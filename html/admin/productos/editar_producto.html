@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Producto</title>
+    <link rel="stylesheet" href="../../../css/editar_producto.css">
+</head>
+<body>
+    <form id="loginForm">
+        <label for="productSelect">Seleccionar Producto:</label>
+        <select id="productSelect">
+            <option value="">-- Selecciona un producto --</option>
+        </select> <br> <br>
+        <label for="newName">Nuevo Nombre Del Producto:</label>
+        <input type="text" id="newName" name="newName"> <br> <br>
+        <label for="newPrice">Nuevo Precio Del Producto:</label>
+        <input type="number" id="newPrice" name="newPrice"> <br> <br>
+        <label for="newStock">Nueva Cantidad De Productos:</label>
+        <input type="number" id="newStock" name="newStock"> <br> <br>
+        <label for="newDescription">Descripción del Producto:</label>
+        <textarea id="newDescription" name="newDescription" rows="5" cols="50" placeholder="Escribe una descripción detallada..."></textarea><br><br>
+        <button type="submit">Editar Producto</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script src="../../../js/admin/productos/editar_producto.js"></script>
+</body>
+</html>

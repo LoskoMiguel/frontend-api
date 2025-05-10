@@ -1,0 +1,178 @@
+/* Estilos generales */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Título de la página */
+body::before {
+    content: "Editar Producto";
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #4f46e5;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Etiquetas de formulario */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+    background-color: #f9fafb;
+}
+
+/* Estilo para el foco en campos */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+    background-color: white;
+}
+
+/* Estilo para el selector */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px 16px;
+    padding-right: 2.5rem;
+}
+
+/* Estilo para el área de texto */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: block;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Mensaje de respuesta */
+#message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* Estilos para mensajes de éxito */
+#message.success {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+/* Estilos para mensajes de error */
+#message.error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* Estilo para campos requeridos */
+select:required,
+input:required {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ef4444' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'%3E%3C/circle%3E%3Cline x1='12' y1='8' x2='12' y2='12'%3E%3C/line%3E%3Cline x1='12' y1='16' x2='12.01' y2='16'%3E%3C/line%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 2.5rem center;
+    background-size: 16px 16px;
+}
+
+/* Estilo para la opción por defecto del selector */
+select option:first-child {
+    color: #9ca3af;
+}
+
+/* Estilo para el placeholder */
+::placeholder {
+    color: #9ca3af;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    
+    form {
+        padding: 1.5rem;
+    }
+    
+    body::before {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animación sutil para el botón */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+    }
+}
+
+button:focus {
+    animation: pulse 1.5s;
+}

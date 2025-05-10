@@ -1,0 +1,200 @@
+/* Estilos generales */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenedor del formulario */
+form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #ef4444; /* Borde rojo para indicar acción destructiva */
+}
+
+/* Título de la página */
+body::before {
+    content: "Eliminar Producto";
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #ef4444; /* Color rojo para enfatizar la acción destructiva */
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Etiquetas de formulario */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #374151;
+}
+
+/* Selector de productos */
+select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+    background-color: #f9fafb;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 16px 16px;
+    padding-right: 2.5rem;
+}
+
+/* Estilo para el foco en el selector */
+select:focus {
+    outline: none;
+    border-color: #ef4444;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+    background-color: white;
+}
+
+/* Estilo para la opción por defecto del selector */
+select option:first-child {
+    color: #9ca3af;
+}
+
+/* Estilo para el botón de eliminar */
+button {
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Icono de advertencia para el botón */
+button::before {
+    content: "⚠️";
+    margin-right: 0.5rem;
+    font-size: 1.125rem;
+}
+
+button:hover {
+    background-color: #dc2626;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Mensaje de respuesta */
+#message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+/* Estilos para mensajes de éxito */
+#message.success {
+    background-color: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+/* Estilos para mensajes de error */
+#message.error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+/* Diálogo de confirmación personalizado */
+.confirm-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+    width: 90%;
+    z-index: 50;
+    border-top: 4px solid #ef4444;
+}
+
+.confirm-dialog-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 40;
+}
+
+/* Animación para el botón */
+@keyframes pulse-warning {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+    }
+}
+
+button:focus {
+    animation: pulse-warning 1.5s;
+}
+
+/* Estilo para el formulario cuando está a punto de enviar (para JS) */
+form.confirming {
+    background-color: #fef2f2;
+    border-color: #b91c1c;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    
+    form {
+        padding: 1.5rem;
+    }
+    
+    body::before {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estilo para el mensaje de advertencia */
+form::after {
+    content: "Esta acción no se puede deshacer. El producto seleccionado será eliminado permanentemente.";
+    display: block;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #fff8f8;
+    border: 1px solid #fee2e2;
+    border-radius: 0.375rem;
+    color: #991b1b;
+    font-size: 0.875rem;
+}

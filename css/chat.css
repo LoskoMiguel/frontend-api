@@ -1,0 +1,179 @@
+/* Estilos generales */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+    line-height: 1.5;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Título principal */
+h1 {
+    color: #4f46e5;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Formulario de chat */
+#chatForm {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #4b5563;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+
+button {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #e5e7eb;
+    margin: 1.5rem 0;
+}
+
+/* Área de respuesta */
+#respuesta {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem;
+    min-height: 200px;
+}
+
+/* Estilos para la pregunta del usuario */
+#respuesta p:first-child {
+    color: #6b7280;
+    font-style: italic;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Estilos para el título de la respuesta */
+#respuesta h2, 
+#respuesta h3 {
+    color: #111827;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem 0;
+}
+
+#respuesta h2:first-of-type {
+    margin-top: 0;
+}
+
+/* Estilos para los clientes */
+#respuesta h3 {
+    color: #4f46e5;
+    font-size: 1.125rem;
+    margin-top: 1.5rem;
+    background-color: #eef2ff;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+}
+
+/* Estilos para las listas */
+#respuesta ul {
+    margin: 0.5rem 0 1.5rem 0;
+    padding-left: 1.5rem;
+}
+
+#respuesta li {
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+/* Estilos para los datos de ventas */
+#respuesta p {
+    margin-bottom: 0.5rem;
+}
+
+/* Destacar fechas */
+#respuesta p:has(strong:contains("Fecha")),
+#respuesta p:contains("Fecha") {
+    color: #6b7280;
+    font-size: 0.875rem;
+}
+
+/* Destacar totales */
+#respuesta li:contains("Total de compra:"),
+#respuesta p:contains("Total de compra:"),
+#respuesta p:contains("Total de ventas:") {
+    font-weight: 500;
+}
+
+#respuesta p:last-child {
+    margin-top: 1.5rem;
+    font-weight: 700;
+    color: #111827;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Tarjetas para cada cliente */
+#respuesta div.cliente {
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid #4f46e5;
+}
+
+/* Destacar montos */
+.monto {
+    font-weight: 600;
+    color: #047857;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    body {
+        padding: 1rem;
+    }
+    
+    #chatForm, #respuesta {
+        padding: 1rem;
+    }
+}

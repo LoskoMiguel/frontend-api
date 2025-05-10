@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="../../../css/agregar_producto.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="title">Agregar Producto</h1>
+            <a href="dashboard_productos.html" class="back-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M19 12H5"></path>
+                    <path d="M12 19l-7-7 7-7"></path>
+                </svg>
+                Volver
+            </a>
+        </div>
+
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="productName">Nombre del Producto:</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="priceProduct">Precio del Producto:</label>
+                <input type="number" id="priceProduct" name="priceProduct" step="0.01" min="0" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="stockProduct">Cantidad del Producto:</label>
+                <input type="number" id="stockProduct" name="stockProduct" min="0" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="productDescription">Descripción del Producto:</label>
+                <textarea id="productDescription" name="productDescription" placeholder="Escribe una descripción detallada..."></textarea>
+            </div>
+            
+            <button type="submit">Agregar Producto</button>
+        </form>
+
+        <p id="message"></p>
+    </div>
+
+    <script src="../../../js/admin/productos/agregar_producto.js"></script>
+</body>
+</html>

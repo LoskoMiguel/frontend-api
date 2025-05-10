@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Administrativo</title>
+    <link rel="stylesheet" href="../../css/dashboard_admin.css">
+</head>
+<body>
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">AdminPanel</div>
+        </div>
+        <nav class="sidebar-menu">
+            <a href="#dashboard" class="menu-item active" data-section="dashboard">
+                <svg class="svg-icon menu-icon" viewBox="0 0 24 24">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                Dashboard
+            </a>
+            <a href="productos/dashboard_productos.html" class="menu-item" data-section="products">
+                <svg class="svg-icon menu-icon" viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect>
+                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                    <line x1="8" y1="16" x2="16" y2="16"></line>
+                    <line x1="8" y1="8" x2="16" y2="8"></line>
+                </svg>
+                Gestión Productos
+            </a>
+            <a href="chat.html" class="menu-item" data-section="chat">
+                <svg class="svg-icon menu-icon" viewBox="0 0 24 24">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+                Chat IA
+            </a>
+            <a href="../registrar_venta.html" class="menu-item" data-section="sales">
+                <svg class="svg-icon menu-icon" viewBox="0 0 24 24">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+                Registrar Venta
+            </a>
+            <a href="registrar_usuario.html" class="menu-item" data-section="users">
+                <svg class="svg-icon menu-icon" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                Registrar Usuario
+            </a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="header">
+            <button class="menu-toggle" id="menuToggle">
+                <svg class="svg-icon" viewBox="0 0 24 24">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+            <h1 class="page-title">Dashboard</h1>
+            <button id="logoutBtn" class="logout-btn">Cerrar Sesión</button>
+        </header>
+
+        <div class="dashboard-content">
+            <h2 class="welcome-message">Bienvenido Admin</h2>
+            
+            <div class="dashboard-cards">
+                <a href="productos/dashboard_productos.html" class="card" data-section="products">
+                    <div class="card-icon products">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                            <line x1="8" y1="16" x2="16" y2="16"></line>
+                            <line x1="8" y1="8" x2="16" y2="8"></line>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Gestión de Productos</h3>
+                    <p class="card-description">Administra el inventario, añade, edita o elimina productos del catálogo.</p>
+                </a>
+                
+                <a href="chat.html" class="card" data-section="chat">
+                    <div class="card-icon chat">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Chat IA</h3>
+                    <p class="card-description">Interactúa con la inteligencia artificial para obtener asistencia y respuestas.</p>
+                </a>
+                
+                <a href="../registrar_venta.html" class="card" data-section="sales">
+                    <div class="card-icon sales">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Registrar Venta</h3>
+                    <p class="card-description">Registra nuevas ventas, genera facturas y gestiona el historial de transacciones.</p>
+                </a>
+                
+                <a href="registrar_usuario.html" class="card" data-section="users">
+                    <div class="card-icon users">
+                        <svg class="svg-icon" viewBox="0 0 24 24">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Registrar Usuario</h3>
+                    <p class="card-description">Añade nuevos usuarios, asigna roles y gestiona permisos de acceso.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('active');
+        });
+
+        // Change active menu item and update page title
+        function updateActiveSection(section) {
+            const menuItems = document.querySelectorAll('.menu-item');
+            menuItems.forEach(item => item.classList.remove('active'));
+            
+            const activeItem = document.querySelector(`.menu-item[data-section="${section}"]`);
+            if (activeItem) {
+                activeItem.classList.add('active');
+                document.querySelector('.page-title').textContent = activeItem.textContent.trim();
+            }
+        }
+
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                const section = this.getAttribute('data-section');
+                updateActiveSection(section);
+                
+                // Close sidebar on mobile after clicking
+                if (window.innerWidth <= 768) {
+                    document.getElementById('sidebar').classList.remove('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const section = this.getAttribute('data-section');
+                updateActiveSection(section);
+            });
+        });
+
+        function handleHashChange() {
+            const hash = window.location.hash.substring(1);
+            if (hash) {
+                updateActiveSection(hash);
+            }
+        }
+
+        window.addEventListener('hashchange', handleHashChange);
+        handleHashChange();
+    </script>
+
+    <script src="../../js/admin/admin_dashboard.js"></script>    
+</body>
+</html>

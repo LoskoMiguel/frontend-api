@@ -1,0 +1,50 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Venta</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <link rel="stylesheet" href="../css/registrar_venta.css">
+</head>
+<body>
+    <h1>Registrar Venta</h1>
+    
+    <form id="ventaForm">
+        <div class="form-group">
+            <label for="producto">Producto:</label>
+            <select name="producto" id="producto">
+                <option value="">Selecciona Un Producto</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" min="1">
+        </div>
+        
+        <div class="form-group">
+            <label for="cliente">Nombre Del Cliente:</label>
+            <input type="text" id="cliente" name="cliente">
+        </div>
+        
+        <div class="form-group">
+            <label for="metodoPago">Metodo De Pago:</label>
+            <input type="text" id="metodoPago" name="metodoPago">
+        </div>
+        
+        <div class="button-group">
+            <button type="button" onclick="agregarProducto(event)">Agregar Producto</button>
+            <button type="button" onclick="agregarVenta(event)">Terminar Venta</button>
+            <button type="button" onclick="sumarProducto(event)">Ver Precio Hasta Ahora</button>
+        </div>
+    </form>
+
+    <ul id="productosAgregados"></ul>
+
+    <p id="totalCompra"></p>
+
+    <p id="message"></p>
+    <button id="siguienteVentaBtn" style="display: none;" onclick="location.reload()">Siguiente Venta</button>    
+
+    <script src="../js/registrar_venta.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+</body>
